@@ -1,0 +1,10 @@
+.obsidian
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*~
+.idea/
