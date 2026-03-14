@@ -1,6 +1,6 @@
 # Project
 
-A **Project** is the scope for Epics and the single Excel table. One table in Excel manages all work items across all [Epics](Entity%20-%20Epic.md) within a Project.
+A **Project** is the scope for Epics and the single Excel table. One table in Excel manages all work items across all [Epics](epic.md) within a Project.
 
 ## Schema
 
