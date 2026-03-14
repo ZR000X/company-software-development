@@ -95,14 +95,18 @@ erDiagram
 4. **Filter out Done.** Exclude tickets that are done.
    - **Assumption:** Within this process, tickets that are done stay done. If a done ticket moves back out of Done, it must already have been updated in Excel (as an obscure event has occurred).
 
-5. **Update each ticket that is not done.** For each such ticket:
+5. **Set All Updated to False**.
+
+6. **Update each ticket that is not done.** For each such ticket:
    - **If the JIRA ticket is new and unassigned:**
      1. Click the JIRA link in the Excel table to open the ticket.
      2. Assign it to someone on the [[Entity - Team|Team]].
      3. Comment on the ticket with any additional context.
      4. Inform them personally of the ticket number.
      5. Update the ticket row in Excel with all known fields (name, assignee, others to be assigned later by [[Entity - Role|role]], etc.).
+     6. Set Updated to True
    - **Otherwise (existing ticket):**
      1. Click the JIRA link in the Excel table to open the ticket.
      2. Depending on the previous status, only some fields may have changed; you do not need to update every Excel field, but you can manually review fields as needed so the Excel record matches the latest data in the ticket.
      3. If needed: get Dev Comments from the assigned Dev, add comments on the JIRA ticket as needed, ensure the [[Entity - Person|assignee]] is the right person to move the ticket forward, and ensure they are aware of it.
+     4. Set Updated to True
