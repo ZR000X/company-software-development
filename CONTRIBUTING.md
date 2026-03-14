@@ -12,8 +12,10 @@ Content is plain text (Markdown). Some of it is written in [Obsidian](https://ob
 
 ## Where to put new content
 
-- Process and design notes go in the `docs/` folder.
-- Keep new docs in Markdown (`.md`). Use a clear filename that reflects the topic.
+- **Process notes** go in the `processes/` folder.
+- **Entity notes** (domain concepts) go in the `entities/` folder.
+- **Tool notes** go in the `tools/` folder.
+- Keep new docs in Markdown (`.md`). Use a clear filename that reflects the topic. See each folder's README for naming and structure rules.
 
 ## Pull requests and issues
 

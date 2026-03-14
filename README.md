@@ -23,6 +23,10 @@ NOTE: AI is going to be used to write a lot of content in here via prompts.
 
 ## Getting started
 
-Process and design notes live in the `docs/` folder. We welcome contributions—see [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved. This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md).
+- **Entity notes** (domain concepts: Epic, Project, Person, Team, etc.) live in [entities/](entities/). See [entities/README.md](entities/README.md) for naming and structure.
+- **Process notes** (how work is done—steps, tools, data models) live in [processes/](processes/). See [processes/README.md](processes/README.md) for naming and structure.
+- **Tool notes** (JIRA, Excel, SharePoint, Teams, etc.) live in [tools/](tools/). See [tools/README.md](tools/README.md) for naming and structure.
+
+We welcome contributions—see [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved. This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md).
 
 License: [MIT](LICENSE).
