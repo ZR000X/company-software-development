@@ -1,6 +1,6 @@
 # Membership
 
-A **Membership** links a [[Entity - Person|Person]] to a [[Entity - Team|Team]] with a specific [[Entity - Role|Role]] and an optional description. It represents that a person is part of a team in a given capacity.
+A **Membership** links a [Person](Entity%20-%20Person.md) to a [Team](Entity%20-%20Team.md) with a specific [Role](Entity%20-%20Role.md) and an optional description. It represents that a person is part of a team in a given capacity.
 
 ## Schema
 

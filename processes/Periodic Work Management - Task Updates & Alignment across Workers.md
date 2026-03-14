@@ -2,21 +2,21 @@
 
 ## Purpose
 
-Keep JIRA [[Entity - Ticket|tickets]] and the Excel table (JIRA sheet) in sync: capture new [[Entity - Ticket|tickets]], assign them to a [[Entity - Person|Person]], comment and update in JIRA, and tick them off in Excel. Outcome: Excel and JIRA stay aligned; every active [[Entity - Ticket|ticket]] is assigned and commented.
+Keep JIRA [tickets](../entities/Entity%20-%20Ticket.md) and the Excel table (JIRA sheet) in sync: capture new [tickets](../entities/Entity%20-%20Ticket.md), assign them to a [Person](../entities/Entity%20-%20Person.md), comment and update in JIRA, and tick them off in Excel. Outcome: Excel and JIRA stay aligned; every active [ticket](../entities/Entity%20-%20Ticket.md) is assigned and commented.
 
 ## Conditions
 
 This process is doable only when:
 
-- A [[Entity - Project|Project]] exists in context.
-- A [[Entity - Team|Team]] exists: a set of [[Entity - Person|People]] who are [[Entity - Assignment|Assignable]] to work within the set of [[Entity - Epic|Epics]] in scope.
+- A [Project](../entities/Entity%20-%20Project.md) exists in context.
+- A [Team](../entities/Entity%20-%20Team.md) exists: a set of [People](../entities/Entity%20-%20Person.md) who are [Assignable](../entities/Entity%20-%20Assignment.md) to work within the set of [Epics](../entities/Entity%20-%20Epic.md) in scope.
 
 ## Tools
 
-- [[Tool - JIRA|JIRA]] for collaborative Work Tracking
-- [[Tool - Microsoft Excel|Excel]] for centralized data capturing & feedback assurance
-- [[Tool - Microsoft SharePoint|SharePoint]] for hosting the Excel in a centralized location for any [[Entity - Person|Person]] to run this Process if needed
-- [[Tool - Microsoft Teams|Teams]] for coordination with the Team
+- [JIRA](../tools/Tool%20-%20JIRA.md) for collaborative Work Tracking
+- [Excel](../tools/Tool%20-%20Microsoft%20Excel.md) for centralized data capturing & feedback assurance
+- [SharePoint](../tools/Tool%20-%20Microsoft%20SharePoint.md) for hosting the Excel in a centralized location for any [Person](../entities/Entity%20-%20Person.md) to run this Process if needed
+- [Teams](../tools/Tool%20-%20Microsoft%20Teams.md) for coordination with the Team
 
 ## Behavioural
 
@@ -30,16 +30,16 @@ Important qualities of the person running this process:
 
 ## Data Model
 
-- There should be 1–many [[Entity - Epic|Epics]] on Jira.
+- There should be 1–many [Epics](../entities/Entity%20-%20Epic.md) on Jira.
 - There should be 1 sheet on Excel called `JIRA`.
 - There should be 1 table on the `JIRA` sheet (e.g. called `JIRATickets`).
 - That table should have the below schema.
-- Each row in `JIRATickets` should be 1–1 with the [[Entity - Ticket|tickets]] in JIRA.
-- One table in Excel to manage all work items across all [[Entity - Epic|Epics]] within a [[Entity - Project|Project]].
+- Each row in `JIRATickets` should be 1–1 with the [tickets](../entities/Entity%20-%20Ticket.md) in JIRA.
+- One table in Excel to manage all work items across all [Epics](../entities/Entity%20-%20Epic.md) within a [Project](../entities/Entity%20-%20Project.md).
 
 ### Excel Schema
 
-The table on the `JIRA` sheet (e.g. `JIRATickets`) is defined by the following ERD. Each row is 1–1 with a JIRA [[Entity - Ticket|ticket]].
+The table on the `JIRA` sheet (e.g. `JIRATickets`) is defined by the following ERD. Each row is 1–1 with a JIRA [ticket](../entities/Entity%20-%20Ticket.md).
 
 ```mermaid
 erDiagram
@@ -83,14 +83,14 @@ erDiagram
 
 ## Process
 
-1. **Select Epic.** Choose a specific [[Entity - Epic|Epic]] (within the [[Entity - Project|Project]]) to work on for this run.
+1. **Select Epic.** Choose a specific [Epic](../entities/Entity%20-%20Epic.md) (within the [Project](../entities/Entity%20-%20Project.md)) to work on for this run.
 
-2. **Check for new tickets.** If you suspect new [[Entity - Ticket|tickets]] exist in JIRA: export the tickets from JIRA and use Excel to find any ticket numbers that appear in JIRA but are not yet in the Excel table.
+2. **Check for new tickets.** If you suspect new [tickets](../entities/Entity%20-%20Ticket.md) exist in JIRA: export the tickets from JIRA and use Excel to find any ticket numbers that appear in JIRA but are not yet in the Excel table.
 
 3. **Reconcile.** Ensure the ticket count matches between Excel and JIRA.
-   - **New tickets?** If any new [[Entity - Ticket|tickets]] were logged:
+   - **New tickets?** If any new [tickets](../entities/Entity%20-%20Ticket.md) were logged:
      1. Capture them in the Excel table.
-     2. You then have a 1–1 mapping between the `JIRATickets` table and the [[Entity - Ticket|tickets]] for this [[Entity - Epic|Epic]].
+     2. You then have a 1–1 mapping between the `JIRATickets` table and the [tickets](../entities/Entity%20-%20Ticket.md) for this [Epic](../entities/Entity%20-%20Epic.md).
 
 4. **Filter out Done.** Exclude tickets that are done.
    - **Assumption:** Within this process, tickets that are done stay done. If a done ticket moves back out of Done, it must already have been updated in Excel (as an obscure event has occurred).
@@ -100,13 +100,13 @@ erDiagram
 6. **Update each ticket that is not done.** For each such ticket:
    - **If the JIRA ticket is new and unassigned:**
      1. Click the JIRA link in the Excel table to open the ticket.
-     2. Assign it to someone on the [[Entity - Team|Team]].
+     2. Assign it to someone on the [Team](../entities/Entity%20-%20Team.md).
      3. Comment on the ticket with any additional context.
      4. Inform them personally of the ticket number.
-     5. Update the ticket row in Excel with all known fields (name, assignee, others to be assigned later by [[Entity - Role|role]], etc.).
+     5. Update the ticket row in Excel with all known fields (name, assignee, others to be assigned later by [role](../entities/Entity%20-%20Role.md), etc.).
      6. Set Updated to True
    - **Otherwise (existing ticket):**
      1. Click the JIRA link in the Excel table to open the ticket.
      2. Depending on the previous status, only some fields may have changed; you do not need to update every Excel field, but you can manually review fields as needed so the Excel record matches the latest data in the ticket.
-     3. If needed: get Dev Comments from the assigned Dev, add comments on the JIRA ticket as needed, ensure the [[Entity - Person|assignee]] is the right person to move the ticket forward, and ensure they are aware of it.
+     3. If needed: get Dev Comments from the assigned Dev, add comments on the JIRA ticket as needed, ensure the [assignee](../entities/Entity%20-%20Person.md) is the right person to move the ticket forward, and ensure they are aware of it.
      4. Set Updated to True

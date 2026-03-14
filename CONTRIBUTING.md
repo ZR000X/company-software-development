@@ -8,7 +8,7 @@ Welcome. This project documents and designs business processes in the open and a
 - **Edit or add content** – Propose changes via pull requests. Fix typos, expand notes, or add new process docs.
 - **Discuss** – Use issues to ask questions and discuss how we work.
 
-Content is plain text (Markdown). Some of it is written in [Obsidian](https://obsidian.md/); you can use any editor. AI-assisted drafts are welcome—if you used an AI tool to help write something, that's fine.
+Content is plain text (Markdown). Some of it is written in [Obsidian](https://obsidian.md/); you can use any editor. Use **standard Markdown links** between notes (e.g. `[text](path/to/file.md)`), not Obsidian wikilinks, so the docs render correctly on GitHub. AI-assisted drafts are welcome—if you used an AI tool to help write something, that's fine.
 
 ## Where to put new content
 
