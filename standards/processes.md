@@ -18,6 +18,7 @@ A process note typically includes (in order):
 - **Tools** – Tools used in the process, with standard Markdown links to tool notes (e.g. `[JIRA](../tools/Tool%20-%20JIRA.md)`).
 - **Data Model** – (Optional) Schema or structure (e.g. Excel table, JIRA fields). Use Mermaid per the schema standards below.
 - **Process** – Numbered steps to follow.
+- **Process dependencies** – List other processes this process depends on. Use standard Markdown links to the process notes (e.g. from a file in `processes/to-do/`, link to another process in the same folder with `./other-process-name.md`, or use the path that resolves correctly to the target process file). If there are no dependencies, state "None." This allows building a process dependency graph.
 
 ## Definition / lifecycle process notes
 
@@ -43,7 +44,8 @@ When a process note includes a **Data Model** with a Mermaid diagram for a table
 Check that your process note:
 
 - Has an **H1** at the top that matches the process title (filename without `.md`).
-- Includes **Purpose**, **Conditions**, **Tools** (with links to tool notes), **Data Model** (if needed), and **Process** (numbered steps).
+- Includes **Purpose**, **Conditions**, **Tools** (with links to tool notes), **Data Model** (if needed), **Process** (numbered steps), and **Process dependencies**.
+- States **Process dependencies** clearly: list dependencies with standard Markdown links to other process notes (using the correct relative path from this process file); if the process has no dependencies, state "None."
 - Links to entities and tools via standard Markdown links; does not duplicate their definitions.
 - States **Conditions** clearly so readers know when the process is doable (e.g. Project and Team in context).
 
