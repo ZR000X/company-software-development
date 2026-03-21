@@ -8,6 +8,7 @@ New principle articles should follow the same shape as:
 
 - [business-as-process-and-process-as-data.md](business-as-process-and-process-as-data.md)
 - [process-vs-improv.md](process-vs-improv.md)
+- [written-principles.md](written-principles.md)
 
 Rough **order of material** (top to bottom):
 
