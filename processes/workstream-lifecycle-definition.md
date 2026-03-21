@@ -56,3 +56,7 @@ erDiagram
 3. **Assign a process per transition.** For each transition from one status to the next, name the [Process](../entities/process.md) that performs it. Create or link to process notes in `processes/` as needed.
 
 4. **Document in the table.** Maintain the status-transition table (and Mermaid schema) so it stays the single source of truth for the lifecycle.
+
+## Process dependencies
+
+**None.** This note defines lifecycles and transitions. Operational processes (e.g. [Workstream management](./workstream-management.md)) may consume those definitions for reporting and steering; they are not prerequisites for authoring the lifecycle itself.
