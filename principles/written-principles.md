@@ -1,9 +1,9 @@
 ---
-title: "Written principles and written debate"
+title: Written principles and written debate
 aliases:
   - written-principles
-created: 2026-02-12
-updated: 2026-02-12
+created: 2026-03-21
+updated: 2026-03-21
 tags:
   - principles
   - communication
@@ -12,10 +12,7 @@ tags:
   - writing
 type: principle
 status: draft
-description: >-
-  Why alignment among leaders is stronger when arguments are written, inspected,
-  and versioned before and beside live debate—and how this repository embodies
-  that practice.
+description: Why alignment among leaders is stronger when arguments are written, inspected, and versioned before and beside live debate—and how this repository embodies that practice.
 ---
 
 **Intended audience.** Anyone who must align others across roles, levels, or time: executives, engineering and product leaders, architects, program managers, and staff who steward strategy or standards. The focus is collective decision quality, not prose style for its own sake.

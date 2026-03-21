@@ -2,8 +2,8 @@
 title: "Process versus improvisation: know the terrain"
 aliases:
   - process-vs-improv
-created: 2026-02-11
-updated: 2026-02-11
+created: 2026-03-21
+updated: 2026-03-21
 tags:
   - principles
   - process
@@ -13,9 +13,7 @@ tags:
   - delivery
 type: principle
 status: draft
-description: >-
-  Workflow discovery: when to encode process versus when improvisation wins,
-  environmental fit, and practical heuristics—companion to business-as-process.
+description: "Workflow discovery: when to encode process versus when improvisation wins, environmental fit, and practical heuristics—companion to business-as-process."
 ---
 
 **Intended audience.** This note is for people who choose or coach how teams work: delivery leads, engineering managers, architects, product and program managers, and agile coaches. It complements leadership of technology but focuses on the *modus operandi* of work, not on stack choices.

@@ -1,9 +1,9 @@
 ---
-title: "Competency lines and project delivery"
+title: Competency lines and project delivery
 aliases:
   - competency-vs-project-teams
-created: 2026-02-13
-updated: 2026-02-13
+created: 2026-03-21
+updated: 2026-03-21
 tags:
   - principles
   - organization
@@ -13,10 +13,7 @@ tags:
   - talent
 type: principle
 status: draft
-description: >-
-  Competency-based homes own craft, peer review, quality, and capacity;
-  project and product delivery own commitments and the customer-facing value
-  pipeline—without replacing the professional line.
+description: Competency-based homes own craft, peer review, quality, and capacity; project and product delivery own commitments and the customer-facing value pipeline—without replacing the professional line.
 ---
 
 **Intended audience.** Engineering and technology delivery leaders, program and project managers, product leaders, and HR or talent partners who design or adjust org models. The note is for anyone who must split accountability between craft excellence and time-bound commitments without collapsing the two.

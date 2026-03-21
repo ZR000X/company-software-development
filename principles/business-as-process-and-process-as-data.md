@@ -2,8 +2,8 @@
 title: Business as process—and process as data
 aliases:
   - business-as-process
-created: 2025-03-20
-updated: 2025-03-20
+created: 2026-03-20
+updated: 2026-03-20
 tags:
   - principles
   - business
@@ -15,10 +15,7 @@ tags:
   - data-management
 type: principle
 status: draft
-description: >-
-  For IT leadership: why growing businesses need deliberate process, how work
-  maps to state and data, admin gaps and agentic AI, impact vs cost, and
-  top-down policy with bottom-up improvement.
+description: "For IT leadership: why growing businesses need deliberate process, how work maps to state and data, admin gaps and agentic AI, impact vs cost, and top-down policy with bottom-up improvement."
 ---
 
 **Intended audience.** This note is written primarily for people who lead or shape technology in substantial organizations—CIOs and IT directors, enterprise and solution architects, engineering managers, and senior ICs who own operating models. Others may still find it useful; the bias is toward readers who must connect process, data, tooling, and governance in practice.
