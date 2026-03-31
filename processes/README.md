@@ -121,7 +121,7 @@ This process is doable only when:
 
 Describe inputs, outputs, and records or handoffs read/written. Add a Mermaid `erDiagram` per
 ../standards/processes.md when useful — copy the pattern from
-workstream-lifecycle-definition.md or workstream-management.md.
+workstream-lifecycle-definition.md or workflows/workstream-ticket-update-workflow.md.
 
 ## Process
 

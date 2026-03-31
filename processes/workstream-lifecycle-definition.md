@@ -59,4 +59,4 @@ erDiagram
 
 ## Process dependencies
 
-**None.** This note defines lifecycles and transitions. Operational processes (e.g. [Workstream management](./workstream-management.md)) may consume those definitions for reporting and steering; they are not prerequisites for authoring the lifecycle itself.
+**None.** This note defines lifecycles and transitions. Operational processes (e.g. [Workstream ticket update workflow](./workflows/workstream-ticket-update-workflow.md)) may consume those definitions for reporting and steering; they are not prerequisites for authoring the lifecycle itself.

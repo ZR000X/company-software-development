@@ -7,7 +7,7 @@ This folder contains **process notes**: Obsidian notes that describe how work is
 - **Process-centric content.** Each note describes a single process: its purpose, conditions, tools, impact, cost, skills required, data model (what state is manipulated), and the steps to follow. Processes may link to entity notes (`entities/`) and tool notes (`tools/`) in their descriptions.
 - **Conditions.** State any preconditions (e.g. a Project in context, a Team of assignable People) so readers know when the process is doable. Link to the relevant entity notes where appropriate.
 - **Link to entities and tools.** Use standard Markdown links to entity notes and tool notes where they are relevant (e.g. `[JIRA](../tools/Tool%20-%20JIRA.md)` from a process file). Entity links use `../entities/<kebab-name>.md` (e.g. `../entities/process.md`). See [entities/README.md](../entities/README.md) for entity naming conventions. Do not duplicate entity definitions inside process notes.
-- **Naming.** Process note filenames should clearly identify the process (e.g. `workstream-management.md`). The first heading is the process title.
+- **Naming.** Process note filenames should clearly identify the process (e.g. `workstream-ticket-update-workflow.md`). The first heading is the process title.
 
 ## Structure of a process note
 
