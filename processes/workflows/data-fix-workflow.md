@@ -18,7 +18,7 @@ description: >-
 
 ## Purpose
 
-Apply **controlled data fixes** that are tied to a tracked [Ticket](../entities/ticket.md) in [JIRA](../tools/Tool%20-%20JIRA.md). The workflow gathers context, snapshots affected data **before** changes, implements and reviews the change, deploys to **DEV**, and updates the ticket so the next owner has a clear handoff. **State touched** (JIRA keys, backups, datasets) is summarized under **Data Model**.
+Apply **controlled data fixes** that are tied to a tracked [Ticket](../../entities/ticket.md) in [JIRA](../../tools/Tool%20-%20JIRA.md). The workflow gathers context, snapshots affected data **before** changes, implements and reviews the change, deploys to **DEV**, and updates the ticket so the next owner has a clear handoff. **State touched** (JIRA keys, backups, datasets) is summarized under **Data Model**.
 
 ## Conditions
 
@@ -30,7 +30,7 @@ This process is doable only when:
 
 ## Tools
 
-- [JIRA](../tools/Tool%20-%20JIRA.md) — Authoritative work item for the fix, comments, status, and assignee.
+- [JIRA](../../tools/Tool%20-%20JIRA.md) — Authoritative work item for the fix, comments, status, and assignee.
 - **Backup storage** — Location for JSON snapshot files (see **Data Model** and **Process** step 4).
 - **DEV environment** — Target for deploying the change when applicable.
 - **Cursor** (or another IDE with AI assist) — Optional accelerator for editing; human review remains required.
@@ -39,7 +39,7 @@ This process is doable only when:
 
 - **Traceability** — Every fix is anchored to a JIRA ticket, not a silent edit.
 - **Recovery** — Pre-change JSON snapshots support rollback or comparison if something goes wrong.
-- **Handoffs** — Ticket updates and reassignment make the next step obvious for other [People](../entities/person.md).
+- **Handoffs** — Ticket updates and reassignment make the next step obvious for other [People](../../entities/person.md).
 - **Quality** — Explicit review and DEV deployment reduce the chance of unvetted changes reaching wider use.
 
 ## Cost
@@ -48,7 +48,7 @@ This process is doable only when:
 
 ## Skills required
 
-Capabilities the running agent needs (mappable to [Skill](../entities/skill.md) notes as you add them):
+Capabilities the running agent needs (mappable to [Skill](../../entities/skill.md) notes as you add them):
 
 - **JIRA hygiene** — Comments, status, assignee, and subtasks kept accurate.
 - **Stakeholder communication** — Fast clarification when requirements are ambiguous.
@@ -60,13 +60,13 @@ Capabilities the running agent needs (mappable to [Skill](../entities/skill.md) 
 
 ### JIRA ticket keys
 
-JIRA issue keys used in this process (for the ticket itself and in backup filenames) follow the same semantics as **`Ticket_Number`** on the **`JIRATickets`** logical entity. The canonical `erDiagram` lives in [../data/work-items.md](../data/work-items.md). Conventions for data notes: [../data/README.md](../data/README.md).
+JIRA issue keys used in this process (for the ticket itself and in backup filenames) follow the same semantics as **`Ticket_Number`** on the **`JIRATickets`** logical entity. The canonical `erDiagram` lives in [../../data/work-items.md](../../data/work-items.md). Conventions for data notes: [../../data/README.md](../../data/README.md).
 
 **Backup files:** before changing data, write one JSON snapshot per affected dataset (or agreed slice), named:
 
 `YYYY-MM-DD-<JIRA-KEY>.json`
 
-Example: `2026-03-16-FS-1234.json`. The `<JIRA-KEY>` segment must match the project key + number form you use in JIRA and align with `Ticket_Number` in [work-items.md](../data/work-items.md).
+Example: `2026-03-16-FS-1234.json`. The `<JIRA-KEY>` segment must match the project key + number form you use in JIRA and align with `Ticket_Number` in [work-items.md](../../data/work-items.md).
 
 ### Artifacts this process reads and writes
 
@@ -87,7 +87,7 @@ No separate `change-log.csv` (or equivalent) is required by this process.
 
 3. **Record context on the ticket.** Add or update the ticket with what you learned in step 2 so the record stays complete.
 
-4. **Snapshot before change.** For each affected dataset (or agreed unit), create a backup file named `YYYY-MM-DD-<JIRA-KEY>.json` capturing state **before** the change. Use the same JIRA key form as `Ticket_Number` in [../data/work-items.md](../data/work-items.md). Complete this **before** applying the fix.
+4. **Snapshot before change.** For each affected dataset (or agreed unit), create a backup file named `YYYY-MM-DD-<JIRA-KEY>.json` capturing state **before** the change. Use the same JIRA key form as `Ticket_Number` in [../../data/work-items.md](../../data/work-items.md). Complete this **before** applying the fix.
 
 5. **Implement and review.** Make the change (e.g. using Cursor for speed). **Review** the diff or result and **take responsibility** for accuracy.
 

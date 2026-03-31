@@ -46,5 +46,5 @@ From a file in `processes/`, use relative paths such as:
 | File | Describes |
 | ---- | --------- |
 | [work-items.md](work-items.md) | `JIRATickets` logical model (JIRA keys in `Ticket_Number`); used in [Workstream ticket update workflow](../processes/workflows/workstream-ticket-update-workflow.md) and for key semantics in [Data fix workflow](../processes/workflows/data-fix-workflow.md). |
-| [timesheets.md](timesheets.md) | `Timesheets` logical model ([Time Entry](../entities/time-entry.md)–shaped rows: `agentRef`, `workRef`, `activityRef`, `startAt`, nullable `endAt` until close, duration; many rows per `workRef`); canonical schema for [Main workflow](../processes/main-workflow.md). |
+| [timesheets.md](timesheets.md) | `Timesheets` logical model ([Time Entry](../entities/time-entry.md)–shaped rows: `agentRef`, `workRef`, `activityRef`, `startAt`, nullable `endAt` until close, duration; many rows per `workRef`); canonical schema for [Main workflow](../processes/workflows/main-workflow.md). |
 | [workstream-management-report.md](workstream-management-report.md) | `WorkstreamManagementReport` logical output for steering visibility in the same process. |

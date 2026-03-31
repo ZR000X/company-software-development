@@ -21,20 +21,20 @@ description: >-
 
 ## Purpose
 
-Define the **default operating loop** for any **agent** (per the [Processes README](./README.md): person, team, or human-supervised automation). This workflow is not “log after the fact only”: it **frames** how the agent works. Each pass through the loop **opens** a [Time Entry](../entities/time-entry.md) on the logical **Timesheets** table **before** the substantive work, leaves **`endAt` unset (null)** while work runs, then **closes** the row when the session ends—whether the underlying work was **completed**, **interrupted**, **blocked**, or paused by choice. A **substitution step** stands in for whichever concrete process applies (coding, [Data fix workflow](./data-fix-workflow.md), etc.), so this note is the **main** workflow inside which other workflows run. A human agent is a [Person](../entities/person.md). Outcome: auditable segments of time against [Work](../entities/work.md) and [Activity](../entities/activity.md), feeding [Time and activity reporting](./time-and-activity-reporting.md).
+Define the **default operating loop** for any **agent** (per the [Processes README](../README.md): person, team, or human-supervised automation). This workflow is not “log after the fact only”: it **frames** how the agent works. Each pass through the loop **opens** a [Time Entry](../../entities/time-entry.md) on the logical **Timesheets** table **before** the substantive work, leaves **`endAt` unset (null)** while work runs, then **closes** the row when the session ends—whether the underlying work was **completed**, **interrupted**, **blocked**, or paused by choice. A **substitution step** stands in for whichever concrete process applies (coding, [Data fix workflow](./data-fix-workflow.md), etc.), so this note is the **main** workflow inside which other workflows run. A human agent is a [Person](../../entities/person.md). Outcome: auditable segments of time against [Work](../../entities/work.md) and [Activity](../../entities/activity.md), feeding [Time and activity reporting](./time-and-activity-reporting.md).
 
 ## Conditions
 
 This process is doable only when:
 
 - An **agent** is in context (`agentRef`).
-- You can name the [Work](../entities/work.md) (e.g. [Ticket](../entities/ticket.md)) and [Activity](../entities/activity.md) for **this session slice** before the substitution step.
+- You can name the [Work](../../entities/work.md) (e.g. [Ticket](../../entities/ticket.md)) and [Activity](../../entities/activity.md) for **this session slice** before the substitution step.
 - The tool supports **creating a row with a null `endAt`** and **updating it later** (or an equivalent pattern).
 - An [Activity](../entities/activity.md) catalogue exists (see Process dependencies).
 
 ## Tools
 
-- [JIRA](../tools/Tool%20-%20JIRA.md) and/or [Excel](../tools/Tool%20-%20Microsoft%20Excel.md) (or another time-tracking store) that can hold **Timesheets**-shaped rows with nullable `endAt` until updated.
+- [JIRA](../../tools/Tool%20-%20JIRA.md) and/or [Excel](../../tools/Tool%20-%20Microsoft%20Excel.md) (or another time-tracking store) that can hold **Timesheets**-shaped rows with nullable `endAt` until updated.
 
 ## Impact
 
@@ -55,11 +55,11 @@ This process is doable only when:
 
 ## Data Model
 
-Each loop pass targets one **Timesheets** row: **`startAt`** set when the row is **opened** (before substitution); **`endAt` null** while the substituted workflow runs; **`endAt`** and **`duration`** (if stored) set when the session **ends**. Many rows may share the same `workRef`. Canonical fields: [../data/timesheets.md](../data/timesheets.md).
+Each loop pass targets one **Timesheets** row: **`startAt`** set when the row is **opened** (before substitution); **`endAt` null** while the substituted workflow runs; **`endAt`** and **`duration`** (if stored) set when the session **ends**. Many rows may share the same `workRef`. Canonical fields: [../../data/timesheets.md](../../data/timesheets.md).
 
 ## Process
 
-1. **Select work and activity for this session.** Choose the [Work](../entities/work.md) (e.g. ticket) and the [Activity](../entities/activity.md) that describe the slice of effort you are about to spend.
+1. **Select work and activity for this session.** Choose the [Work](../../entities/work.md) (e.g. ticket) and the [Activity](../../entities/activity.md) that describe the slice of effort you are about to spend.
 
 2. **Open a timesheet row (before substitution).** Insert a **Timesheets** row with `agentRef`, `workRef`, `activityRef`, **`startAt`** set to now (or agreed session start), and **`endAt` left null**. Keep the **row identifier** (`id` or tool key) for the closing step. Optionally leave **duration** unset until close.
 
@@ -71,4 +71,4 @@ Each loop pass targets one **Timesheets** row: **`startAt`** set when the row is
 
 ## Process dependencies
 
-- [Activity Catalogue and Skill Mapping](./to-do/activity-catalogue-and-skill-mapping.md) — so [Activity](../entities/activity.md) values exist for step 1.
+- [Activity Catalogue and Skill Mapping](../to-do/activity-catalogue-and-skill-mapping.md) — so [Activity](../../entities/activity.md) values exist for step 1.

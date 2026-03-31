@@ -23,6 +23,8 @@ Meta-documents (e.g. [process-dependencies.md](process-dependencies.md)) may sit
 
 Each **runnable** process is one Markdown file. Use a single **H1** as the process title. The filename should clearly identify the process (often aligned with the H1; kebab-case `.md` is typical).
 
+YAML frontmatter is **optional**. When present, use a consistent key set with nearby process notes (commonly `title`, `aliases`, `created`, `updated`, `tags`, `type`, `status`, `description`). Frontmatter supplements metadata; runnable behavior stays in the H1 + sectioned body.
+
 Sections use **level-2 headings** in this **default order**:
 
 | Order | Heading | Required | Purpose |

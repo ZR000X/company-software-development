@@ -1,3 +1,20 @@
+---
+title: Workstream ticket update workflow
+aliases:
+  - workstream-ticket-update-workflow
+created: 2026-03-21
+updated: 2026-03-31
+tags:
+  - processes
+  - jira
+  - reporting
+  - workflow
+type: process
+status: draft
+description: >-
+  Updates workstream ticket reporting from JIRA into Excel, refreshes pivots, and sends a structured team communication.
+---
+
 # Workstream ticket update workflow
 
 ## Purpose
@@ -24,7 +41,7 @@ This workflow is doable only when:
 
 - Keeps ticket status visibility synchronized between JIRA and Excel for all active Epics.
 - Produces a consistent daily/periodic reporting package for delivery teams and stakeholders.
-- Reduces status drift by explicitly capturing `Today Status` and `Yesterday Status`.
+- Reduces status drift by explicitly capturing `Today_Status` and `Yesterday_Status`.
 - Improves handoff quality through one final, structured email communication.
 
 ## Cost
@@ -41,6 +58,8 @@ Runtime per reporting cycle is usually 30-120 minutes depending on active Epic c
 ## Data Model
 
 The external Excel work-item table uses the canonical `JIRATickets` schema in [../../data/work-items.md](../../data/work-items.md). That file is the source of truth and includes datatype, field name, and description for every field.
+
+For consistency in this workflow, canonical field keys are referenced exactly as defined in that schema (for example `Ticket_Number`, `Today_Status`, `Yesterday_Status`). If your Excel headers use display labels (for example "Ticket Number"), map them explicitly to these canonical keys.
 
 ## Reports and communication outputs
 
@@ -62,11 +81,11 @@ flowchart TB
 
 ### Pivot report 1: Transitional View of Tickets
 
-- Purpose: show movement from `Yesterday Status` to `Today Status`.
+- Purpose: show movement from `Yesterday_Status` to `Today_Status`.
 - Suggested pivot layout:
-  - Rows: `Yesterday Status`
-  - Columns: `Today Status`
-  - Values: Count of `Ticket Number`
+  - Rows: `Yesterday_Status`
+  - Columns: `Today_Status`
+  - Values: Count of `Ticket_Number`
   - Filters: `Epic` (active only), optional `Priority`, optional `Assignee`
 
 ```mermaid
@@ -96,8 +115,8 @@ Example interpretation:
 
 - Purpose: show current status counts for active Epics at the reporting timestamp.
 - Suggested pivot layout:
-  - Rows: `Today Status`
-  - Values: Count of `Ticket Number`
+  - Rows: `Today_Status`
+  - Values: Count of `Ticket_Number`
   - Filter: `Epic` (active only)
 
 ```mermaid
@@ -128,16 +147,16 @@ Examples of practical ticket groups that signal work required by other team memb
 
 1. **Define active scope.** Confirm the active Epics in scope and reporting timestamp.
 2. **Pull current ticket data from JIRA.** Export or query all in-scope ticket fields needed by the Excel schema.
-3. **Update Excel table.** Reconcile rows by `Ticket Number` and update fields in the schema, especially `Today Status`, `Yesterday Status`, `Updated`, ownership fields, and dates.
+3. **Update Excel table.** Reconcile rows by `Ticket_Number` and update fields in the schema, especially `Today_Status`, `Yesterday_Status`, `Updated`, ownership fields, and dates.
 4. **Validate table integrity.** Check for missing ticket keys, duplicate keys, and invalid status values before reporting.
-5. **Refresh Transitional pivot.** Refresh Pivot Table for movement from `Yesterday Status` to `Today Status`.
+5. **Refresh Transitional pivot.** Refresh Pivot Table for movement from `Yesterday_Status` to `Today_Status`.
 6. **Refresh Snapshot pivot.** Refresh Pivot Table for current status counts.
 7. **Prepare Ticket Groups views.** Apply agreed lifecycle-aware filters to produce group slices (for example, Tickets to Deploy and Tickets in Progress).
 8. **Build final email communication.** Send one structured update in this exact order:
-   9. Transitional View of Tickets (pivot table) - only exclude on first communication within the [Project](../../entities/project.md) as there is no `Yesterday Status` on any tickets.
-   10. Snapshot View of Tickets (pivot table)
-   11. Ticket Groups (with one subsection per configured group)
-12. **Record run metadata.** Capture as-of timestamp, Epic scope, and any caveats or data quality notes in the email body or run log.
+   1. Transitional View of Tickets (pivot table) - only exclude on first communication within the [Project](../../entities/project.md) as there is no `Yesterday_Status` on any tickets.
+   2. Snapshot View of Tickets (pivot table).
+   3. Ticket Groups (with one subsection per configured group).
+9. **Record run metadata.** Capture as-of timestamp, Epic scope, and any caveats or data quality notes in the email body or run log.
 
 ## Process dependencies
 

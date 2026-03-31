@@ -8,6 +8,7 @@ This folder contains **process notes**: Obsidian notes that describe how work is
 - **Conditions.** State any preconditions (e.g. a Project in context, a Team of assignable People) so readers know when the process is doable. Link to the relevant entity notes where appropriate.
 - **Link to entities and tools.** Use standard Markdown links to entity notes and tool notes where they are relevant (e.g. `[JIRA](../tools/Tool%20-%20JIRA.md)` from a process file). Entity links use `../entities/<kebab-name>.md` (e.g. `../entities/process.md`). See [entities/README.md](../entities/README.md) for entity naming conventions. Do not duplicate entity definitions inside process notes.
 - **Naming.** Process note filenames should clearly identify the process (e.g. `workstream-ticket-update-workflow.md`). The first heading is the process title.
+- **Frontmatter policy.** YAML frontmatter is optional. If used, keep keys consistent with neighboring process notes (commonly `title`, `aliases`, `created`, `updated`, `tags`, `type`, `status`, `description`) and keep the H1/body sections authoritative for runnable content.
 
 ## Structure of a process note
 
@@ -54,4 +55,4 @@ Check that your process note:
 
 For **lifecycle/definition notes**, also check: status transition table is present; Mermaid schema matches the table; entity links use standard Markdown and targets exist in `entities/`.
 
-Entity and tool notes live in the `entities/` and `tools/` folders and contain only definitions; they do not reference specific processes.
+Entity and tool notes live in the `entities/` and `tools/` folders and primarily contain definitions. Tool notes may include a brief optional "Used in" section with Markdown links to relevant processes for navigation context; do not duplicate process steps in tool notes.
