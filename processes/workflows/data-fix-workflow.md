@@ -1,3 +1,19 @@
+---
+title: Data fix workflow
+aliases:
+  - data-fix-workflow
+created: 2026-03-21
+updated: 2026-03-21
+tags:
+  - processes
+  - data
+  - jira
+type: process
+status: draft
+description: >-
+  Controlled data fixes tied to JIRA tickets, with snapshots, DEV deploy, and ticket updates.
+---
+
 # Data fix workflow
 
 ## Purpose
@@ -44,13 +60,13 @@ Capabilities the running agent needs (mappable to [Skill](../entities/skill.md) 
 
 ### JIRA ticket keys
 
-JIRA issue keys used in this process (for the ticket itself and in backup filenames) follow the same semantics as **`Ticket_Number`** on the **`JIRATickets`** logical entity. The canonical `erDiagram` lives in [../data/work-items.mmd](../data/work-items.mmd). Conventions for `.mmd` files: [../data/README.md](../data/README.md).
+JIRA issue keys used in this process (for the ticket itself and in backup filenames) follow the same semantics as **`Ticket_Number`** on the **`JIRATickets`** logical entity. The canonical `erDiagram` lives in [../data/work-items.md](../data/work-items.md). Conventions for data notes: [../data/README.md](../data/README.md).
 
 **Backup files:** before changing data, write one JSON snapshot per affected dataset (or agreed slice), named:
 
 `YYYY-MM-DD-<JIRA-KEY>.json`
 
-Example: `2026-03-16-FS-1234.json`. The `<JIRA-KEY>` segment must match the project key + number form you use in JIRA and align with `Ticket_Number` in [work-items.mmd](../data/work-items.mmd).
+Example: `2026-03-16-FS-1234.json`. The `<JIRA-KEY>` segment must match the project key + number form you use in JIRA and align with `Ticket_Number` in [work-items.md](../data/work-items.md).
 
 ### Artifacts this process reads and writes
 
@@ -71,7 +87,7 @@ No separate `change-log.csv` (or equivalent) is required by this process.
 
 3. **Record context on the ticket.** Add or update the ticket with what you learned in step 2 so the record stays complete.
 
-4. **Snapshot before change.** For each affected dataset (or agreed unit), create a backup file named `YYYY-MM-DD-<JIRA-KEY>.json` capturing state **before** the change. Use the same JIRA key form as `Ticket_Number` in [../data/work-items.mmd](../data/work-items.mmd). Complete this **before** applying the fix.
+4. **Snapshot before change.** For each affected dataset (or agreed unit), create a backup file named `YYYY-MM-DD-<JIRA-KEY>.json` capturing state **before** the change. Use the same JIRA key form as `Ticket_Number` in [../data/work-items.md](../data/work-items.md). Complete this **before** applying the fix.
 
 5. **Implement and review.** Make the change (e.g. using Cursor for speed). **Review** the diff or result and **take responsibility** for accuracy.
 

@@ -1,3 +1,19 @@
+---
+title: Process dependency graph
+aliases:
+  - process-dependencies
+created: 2026-03-21
+updated: 2026-03-22
+tags:
+  - processes
+  - meta
+  - dependencies
+type: documentation
+status: draft
+description: >-
+  Convention and Mermaid graph for time, activity, reporting, and talent pipeline process dependencies.
+---
+
 # Process dependency graph
 
 Each process note states which other processes it depends on in a **Process dependencies** section. This document summarises the convention and provides a dependency graph for the time, activity, and talent pipeline processes.
@@ -15,18 +31,18 @@ flowchart LR
   subgraph noDeps [No dependencies]
     ActivityCatalogue[Activity catalogue and skill mapping]
   end
-  PersonalTime[Personal time and task management]
+  MainWorkflow[Main workflow]
   Reporting[Time and activity reporting]
   TalentPipeline[Talent inflow pipeline management]
-  ActivityCatalogue --> PersonalTime
-  PersonalTime --> Reporting
+  ActivityCatalogue --> MainWorkflow
+  MainWorkflow --> Reporting
   ActivityCatalogue --> Reporting
   Reporting --> TalentPipeline
 ```
 
 - **Activity catalogue and skill mapping** has no dependencies; it can be run first to create the activity and skill lists and mapping.
-- **Personal time and task management** depends on Activity catalogue and skill mapping (activities must exist to classify time).
-- **Time and activity reporting** depends on Personal time and task management (needs time entries); optionally on Activity catalogue and skill mapping (for skill-level insights).
+- **Main workflow** depends on Activity catalogue and skill mapping (activities must exist to classify time).
+- **Time and activity reporting** depends on Main workflow (needs time entries); optionally on Activity catalogue and skill mapping (for skill-level insights).
 - **Talent inflow pipeline management** depends on Time and activity reporting (capacity and activity concentration); optionally on Activity catalogue and skill mapping (skill demand).
 
 Update this graph when new processes are added or dependencies change.

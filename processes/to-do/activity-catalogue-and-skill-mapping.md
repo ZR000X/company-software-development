@@ -1,3 +1,20 @@
+---
+title: Activity Catalogue and Skill Mapping
+aliases:
+  - activity-catalogue-and-skill-mapping
+created: 2026-03-21
+updated: 2026-03-22
+tags:
+  - processes
+  - activity
+  - skills
+  - to-do
+type: process
+status: draft
+description: >-
+  Maintain activity catalogue and map activities to skills for time reporting and talent pipeline.
+---
+
 # Activity Catalogue and Skill Mapping
 
 ## Purpose
@@ -47,7 +64,7 @@ erDiagram
 
 3. **Map each activity to one or more skills.** For each [Activity](../../entities/activity.md), record which [Skill](../../entities/skill.md)s it requires or utilises in the [Activity–Skill](../../entities/activity-skill.md) mapping table.
 
-4. **Publish or update.** Make the catalogue and mapping available so personal time and task management (and time and activity reporting) can use them.
+4. **Publish or update.** Make the catalogue and mapping available so [Main workflow](../main-workflow.md) (and [Time and activity reporting](../time-and-activity-reporting.md)) can use them.
 
 ## Process dependencies
 

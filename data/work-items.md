@@ -1,3 +1,24 @@
+---
+title: Work items (JIRATickets)
+aliases:
+  - work-items
+created: 2026-03-21
+updated: 2026-03-21
+tags:
+  - data
+  - schema
+  - jira
+  - tickets
+type: data
+status: draft
+description: >-
+  Canonical erDiagram for the logical JIRATickets table (Excel JIRA sheet).
+---
+
+# Work items (JIRATickets)
+
+Canonical `erDiagram` for the logical **`JIRATickets`** table (Excel `JIRA` sheet). Each row aligns with one JIRA ticket; `Ticket_Number` is the issue key.
+
 ```mermaid
 erDiagram
     JIRATickets {
