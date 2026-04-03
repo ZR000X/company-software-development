@@ -3,7 +3,7 @@ title: Data (canonical ERDs)
 aliases:
   - data-readme
 created: 2026-03-21
-updated: 2026-03-22
+updated: 2026-04-02
 tags:
   - data
   - schema
@@ -46,5 +46,6 @@ From a file in `processes/`, use relative paths such as:
 | File | Describes |
 | ---- | --------- |
 | [work-items.md](work-items.md) | `JIRATickets` logical model (JIRA keys in `Ticket_Number`); used in [Workstream ticket update workflow](../processes/workflows/workstream-ticket-update-workflow.md) and for key semantics in [Data fix workflow](../processes/workflows/data-fix-workflow.md). |
+| [customer-workstream-inflow.md](customer-workstream-inflow.md) | `CustomerWorkstreamInflowRow` logical model (customer intake lines, classification feedback, `Ticket_Number_Ref` when logged); canonical schema for [Customer-facing workstream inflow validation workflow](../processes/workflows/customer-facing-workstream-inflow-validation-workflow.md). |
 | [timesheets.md](timesheets.md) | `Timesheets` logical model ([Time Entry](../entities/time-entry.md)–shaped rows: `agentRef`, `workRef`, `activityRef`, `startAt`, nullable `endAt` until close, duration; many rows per `workRef`); canonical schema for [Main workflow](../processes/workflows/main-workflow.md). |
 | [workstream-management-report.md](workstream-management-report.md) | `WorkstreamManagementReport` logical output for steering visibility in the same process. |

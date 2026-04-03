@@ -3,7 +3,7 @@ title: Workstream inflow ticket grooming workflow
 aliases:
   - workstream-inflow-ticket-grooming-workflow
 created: 2026-04-01
-updated: 2026-04-01
+updated: 2026-04-02
 tags:
   - processes
   - jira
@@ -106,4 +106,5 @@ erDiagram
 
 ## Process dependencies
 
+- [Customer-facing workstream inflow validation workflow](./customer-facing-workstream-inflow-validation-workflow.md) — When inflow originates from a **customer-provided list**, issues should exist only after **classification feedback** and **ticket logging** for accepted work; grooming then applies to those JIRA tickets.
 - [Workstream Lifecycle Definition](../workstream-lifecycle-definition.md) — Provides status semantics and transition intent; Epic-specific inflow rules extend but do not replace alignment with this definition.
