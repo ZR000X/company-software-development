@@ -87,8 +87,8 @@ This note does not prescribe a specific orchestration platform, model provider, 
 
 # 6 References
 
-[^1]: See the principles guidance on durable, versioned argument and shared structure in [written-principles.md](./written-principles.md) and [README.md](./README.md).
+[^1]: See the principles guidance on durable, versioned argument and shared structure in [Written principles and written debate](./01-written-principles.md) and [README.md](./README.md).
 
 [^2]: Baseline workflow reference: [main-workflow.md](../processes/workflows/main-workflow.md).
 
-[^3]: For related process-operating rationale, see [business-as-process-and-process-as-data.md](./business-as-process-and-process-as-data.md).
+[^3]: For related process-operating rationale, see [Business as process—and process as data](./02-business-as-process-and-process-as-data.md).

@@ -76,7 +76,7 @@ Before mandating a framework or declaring process “toxic,” ask:
 - Does the environment already **expect** evidence (tickets, approvals, audit trails)? Fighting that without replacing it is not liberation; it is friction.
 - Are we optimizing for **throughput of known work** or **rate of learning**? Name which one is primary for *this* initiative.
 
-For why mature organizations turn process into something that looks like data, governance, and architecture, see the companion note [Business as process—and process as data](./business-as-process-and-process-as-data.md).
+For why mature organizations turn process into something that looks like data, governance, and architecture, see the companion note [Business as process—and process as data](./02-business-as-process-and-process-as-data.md).
 
 This piece does not cover people dynamics in depth—politics, career incentives, and informal power shape workflows too, and deserve their own reading. Here the focus stays on choosing a fit between improvisation and encodement given the terrain.
 

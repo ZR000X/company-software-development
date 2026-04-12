@@ -1,15 +1,21 @@
 # Principles
 
+**Readers start at** [PRINCIPLES.md](../PRINCIPLES.md) in the repository root for a chronological path through the principle essays. This README is the **authoring** guide: frontmatter, headings, and references.
+
 This folder holds **principle notes**: durable essays that state how we think about a topic—arguments, definitions, and heuristics—not step-by-step procedures. For operational workflows, see `processes/`.
 
 ## Canonical structure
 
 New principle articles should follow the same shape as:
 
-- [business-as-process-and-process-as-data.md](business-as-process-and-process-as-data.md)
-- [process-vs-improv.md](process-vs-improv.md)
-- [written-principles.md](written-principles.md)
-- [competency-vs-project-teams.md](competency-vs-project-teams.md)
+- [01-written-principles.md](01-written-principles.md)
+- [02-business-as-process-and-process-as-data.md](02-business-as-process-and-process-as-data.md)
+- [03-process-vs-improv.md](03-process-vs-improv.md)
+- [04-competency-vs-project-teams.md](04-competency-vs-project-teams.md)
+- [05-agentic-architecture-as-repo-and-workflows.md](05-agentic-architecture-as-repo-and-workflows.md)
+- [06-repository-ia-and-agent-governance-stack.md](06-repository-ia-and-agent-governance-stack.md)
+- [07-operational-regime-and-records-of-work.md](07-operational-regime-and-records-of-work.md)
+- [08-economics-action-lineage-and-context-isolation.md](08-economics-action-lineage-and-context-isolation.md)
 
 Rough **order of material** (top to bottom):
 
@@ -90,7 +96,7 @@ Adjust the **Production.** paragraph if authorship or tooling differs; keep the 
 
 - **Further top-level sections** are `# 2`, `# 3`, … in reading order. Titles should be scannable in a table of contents.
 
-- **Nested subsections** use `## N.m Subtitle` when one numbered chapter needs parts (e.g. `## 6.1`, `## 6.2` under `# 6 …`). Shorter articles may use only `# 1` … `# 6` with no `##` children (see [process-vs-improv.md](process-vs-improv.md)).
+- **Nested subsections** use `## N.m Subtitle` when one numbered chapter needs parts (e.g. `## 6.1`, `## 6.2` under `# 6 …`). Shorter articles may use only `# 1` … `# 6` with no `##` children (see [03-process-vs-improv.md](03-process-vs-improv.md)).
 
 - **Closing scope** (optional but encouraged): before references, one or two paragraphs stating what the note *does not* try to solve and pointing to other topics or articles.
 
@@ -110,8 +116,8 @@ Adjust the **Production.** paragraph if authorship or tooling differs; keep the 
 
 - **Bold**: Sparingly—headings carry structure; body text stays mostly plain.
 - **Italics**: For emphasis or terms of art on first use, not entire sentences.
-- **Links** to other repo notes: relative paths from `principles/`, e.g. `[Title](./other-principle.md)`.
-- **Filenames**: Either descriptive kebab-case (`business-as-process-and-process-as-data.md`) or short stem (`process-vs-improv.md`); frontmatter `aliases` should stay stable if the file is renamed.
+- **Links** to other repo notes: relative paths from `principles/`, e.g. `[Title](./06-other-principle.md)`.
+- **Filenames**: Indexed essays use a **two-digit order prefix** matching [PRINCIPLES.md](../PRINCIPLES.md) (e.g. `03-process-vs-improv.md`); the rest of the stem is descriptive kebab-case. Frontmatter `aliases` should stay stable if the file is renamed.
 
 ## Skeleton template
 

@@ -6,11 +6,11 @@ Normative rules and Mermaid schema detail also live in **[`../standards/processe
 
 ## Why processes belong in this repository
 
-Following [Written principles and written debate](../principles/written-principles.md), durable alignment scales better when expectations are **written**, **reviewable**, and **versioned** (e.g. in Git) than when they exist only in meetings or chat. A process note is the shared baseline: people can read the same steps, propose changes via diff, and link to entities and tools unambiguously.
+Following [Written principles and written debate](../principles/01-written-principles.md), durable alignment scales better when expectations are **written**, **reviewable**, and **versioned** (e.g. in Git) than when they exist only in meetings or chat. A process note is the shared baseline: people can read the same steps, propose changes via diff, and link to entities and tools unambiguously.
 
-[Business as process—and process as data](../principles/business-as-process-and-process-as-data.md) treats a process as **operations that change the state of the business**—usefully imagined as transactions against an implicit (or explicit) data model. A serious process definition should name **what data or records are read and written**, **what impact** it provides (revenue is not the only kind; alignment, risk reduction, and compliance count), and **what it costs** in **time per run** and **skills** required of the running agent (person, team, or human-supervised automation). The sections below encode that expectation.
+[Business as process—and process as data](../principles/02-business-as-process-and-process-as-data.md) treats a process as **operations that change the state of the business**—usefully imagined as transactions against an implicit (or explicit) data model. A serious process definition should name **what data or records are read and written**, **what impact** it provides (revenue is not the only kind; alignment, risk reduction, and compliance count), and **what it costs** in **time per run** and **skills** required of the running agent (person, team, or human-supervised automation). The sections below encode that expectation.
 
-[Process versus improvisation](../principles/process-vs-improv.md) reminds us that **how much** process to encode depends on context; this template is the shape when you *do* encode a workflow, not a mandate to maximal ceremony everywhere.
+[Process versus improvisation](../principles/03-process-vs-improv.md) reminds us that **how much** process to encode depends on context; this template is the shape when you *do* encode a workflow, not a mandate to maximal ceremony everywhere.
 
 ## Folder layout
 

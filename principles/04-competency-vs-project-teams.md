@@ -51,7 +51,7 @@ The competency system carries standards and how they evolve: coding or design gu
 
 Capacity management for the discipline also belongs here in substance: how many people can run at what sustainable load, what skills are missing for the work in flight, and when saying no is the correct answer. Delivery can aggregate asks and negotiate priorities; the line should own whether the ask is feasible without burning people out or cutting corners that will cost more later.
 
-Talent and skills plans—who gets stretched, who gets trained, what the next generation of leads looks like—are competency outcomes. For how process and data eventually reflect capacity and operations at scale, see the companion note [Business as process—and process as data](./business-as-process-and-process-as-data.md).
+Talent and skills plans—who gets stretched, who gets trained, what the next generation of leads looks like—are competency outcomes. For how process and data eventually reflect capacity and operations at scale, see the companion note [Business as process—and process as data](./02-business-as-process-and-process-as-data.md).
 
 # 4 What project and product delivery carries
 

@@ -69,7 +69,7 @@ Some organizations institutionalize this with narrative documents read silently 
 
 The [principles README](./README.md) describes how essays in this folder are structured: frontmatter, intended audience, numbered sections, references. That consistency is not bureaucracy; it makes principles comparable, linkable, and evolvable the same way code or specs are.
 
-Substantive examples of long-form reasoning in the same spirit include notes such as [Business as process—and process as data](./business-as-process-and-process-as-data.md). The medium matches the message: if we believe in written alignment, the principles themselves should live where they can be reviewed, quoted, and improved—not only where they can be argued over once in a room.
+Substantive examples of long-form reasoning in the same spirit include notes such as [Business as process—and process as data](./02-business-as-process-and-process-as-data.md). The medium matches the message: if we believe in written alignment, the principles themselves should live where they can be reviewed, quoted, and improved—not only where they can be argued over once in a room.
 
 This note does not replace training in facilitation, mediation, or inclusive meeting design. It does not solve every interpersonal or political dynamic in an organization; those need their own attention and often specialist help. Here the focus stays on one lever: put the argument in writing, then argue with the text in the open.
 
